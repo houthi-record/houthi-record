@@ -1,0 +1,85 @@
+---
+import '@fontsource-variable/newsreader/opsz.css';
+import '@fontsource-variable/newsreader/opsz-italic.css';
+import '@fontsource/ibm-plex-mono/400.css';
+import '@fontsource/ibm-plex-mono/500.css';
+import '../styles/global.css';
+import { SITE, NAV } from '../site.js';
+
+const { title, description = SITE.description, section = '', type = 'website', jsonld = null } = Astro.props;
+const fullTitle = title ? `${title} · ${SITE.name}` : `${SITE.name} · ${SITE.tagline}`;
+const canonical = new URL(Astro.url.pathname, Astro.site).href;
+---
+<!doctype html>
+<html lang={SITE.lang} dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{fullTitle}</title>
+  <meta name="description" content={description}>
+  <link rel="canonical" href={canonical}>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="sitemap" href="/sitemap-index.xml">
+  <meta property="og:site_name" content={SITE.name}>
+  <meta property="og:title" content={title || SITE.name}>
+  <meta property="og:description" content={description}>
+  <meta property="og:type" content={type}>
+  <meta property="og:url" content={canonical}>
+  <meta name="twitter:card" content="summary">
+  <meta name="color-scheme" content="light dark">
+  {jsonld && <script type="application/ld+json" set:html={JSON.stringify(jsonld)} />}
+  <script is:inline>
+    try { var t = localStorage.getItem('hr-theme'); if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="top">
+    <div class="wrap bar">
+      <a class="mark" href="/"><b>{SITE.name}</b><span class="label">{SITE.tagline}</span></a>
+      <nav class="nav" aria-label="Sections">
+        {NAV.map((n) => <a href={n.href} aria-current={section === n.key ? 'page' : undefined}>{n.label}</a>)}
+        <div class="ctl" role="group" aria-label="Language">
+          <button type="button" aria-pressed="true">EN</button>
+          <button type="button" aria-pressed="false" disabled title="Arabic edition in preparation" lang="ar">عربي</button>
+        </div>
+        <div class="ctl" role="group" aria-label="Theme">
+          <button type="button" data-theme-set="system">Auto</button>
+          <button type="button" data-theme-set="light">Light</button>
+          <button type="button" data-theme-set="dark">Dark</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="wrap">
+    <slot />
+  </main>
+  <footer class="foot">
+    <div class="wrap">
+      <span class="label">{SITE.name} · English edition</span>
+      <nav aria-label="Site information">
+        <a class="label" href="/charter/">Charter</a>
+        <a class="label" href="/corrections/">Corrections</a>
+      </nav>
+    </div>
+  </footer>
+  <script is:inline>
+    (function () {
+      var root = document.documentElement;
+      function apply(t) {
+        if (t === 'light' || t === 'dark') root.setAttribute('data-theme', t); else root.removeAttribute('data-theme');
+        document.querySelectorAll('[data-theme-set]').forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.themeSet === t)); });
+      }
+      var saved = 'system';
+      try { saved = localStorage.getItem('hr-theme') || 'system'; } catch (e) {}
+      apply(saved);
+      document.querySelectorAll('[data-theme-set]').forEach(function (b) {
+        b.addEventListener('click', function () {
+          apply(b.dataset.themeSet);
+          try { localStorage.setItem('hr-theme', b.dataset.themeSet); } catch (e) {}
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+---
+import Base from '../layouts/Base.astro';
+import EVENTS from '../data/timeline.json';
+
+const PARTIES = {
+  houthi: 'Houthi movement',
+  govt: 'Yemeni government',
+  saleh: 'Saleh',
+  coalition: 'Saudi-led coalition',
+  intl: 'International',
+};
+const EVIDENCE = { documented: '■ Documented', testimony: '□ Testimony', allegation: '◇ Allegation' };
+const years = [...new Set(EVENTS.map((e) => e.year))];
+---
+<Base title="Timeline" description="A dated timeline of the Houthi movement and the war in Yemen, filterable by party, with sources for every event." section="timeline">
+  <div class="page-head">
+    <span class="label">Timeline · draft</span>
+    <h1>Key events, in order</h1>
+    <p>Filter by party. Each event links to its sources and, where written, to its chapter.</p>
+  </div>
+  <div class="filters" role="group" aria-label="Filter by party">
+    <button type="button" data-f="all" aria-pressed="true">All parties</button>
+    {Object.entries(PARTIES).map(([k, v]) => <button type="button" data-f={k} aria-pressed="false">{v}</button>)}
+  </div>
+  <div class="tl">
+    {years.map((y) => (
+      <section class="year" data-year={y}>
+        <h2>{y}</h2>
+        <div>
+          {EVENTS.filter((e) => e.year === y).map((e) => (
+            <div class="ev" data-party={e.party}>
+              <span class="d">{e.date}</span>
+              <div>
+                <h3>{e.title}</h3>
+                <p>{e.summary}</p>
+                <div class="meta">
+                  <span>{PARTIES[e.party]}</span>
+                  <span>{EVIDENCE[e.evidence]}{e.sources.length === 0 ? ' · sources pending' : ''}</span>
+                  {e.sources.map((s, i) => <a href={s.url} rel="noopener noreferrer">Source {i + 1}</a>)}
+                  {e.chapter && <a href={e.chapter}>Read chapter →</a>}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+    ))}
+  </div>
+  <script is:inline>
+    (function () {
+      var btns = document.querySelectorAll('[data-f]');
+      btns.forEach(function (b) {
+        b.addEventListener('click', function () {
+          var f = b.dataset.f;
+          btns.forEach(function (x) { x.setAttribute('aria-pressed', String(x === b)); });
+          document.querySelectorAll('.ev').forEach(function (ev) { ev.hidden = !(f === 'all' || ev.dataset.party === f); });
+          document.querySelectorAll('.year').forEach(function (y) { y.hidden = !y.querySelector('.ev:not([hidden])'); });
+        });
+      });
+    })();
+  </script>
+</Base>

@@ -1,0 +1,13 @@
+---
+import Base from '../../layouts/Base.astro';
+import RecordList from '../../components/RecordList.astro';
+import { CHAPTERS } from '../../data/chapters.js';
+---
+<Base title="Chapters" description="The history of the Houthi movement in nine chapters, from its roots in Saada to its regional wars." section="chapters">
+  <div class="page-head">
+    <span class="label">Chapters</span>
+    <h1>The story, in order</h1>
+    <p>Nine chapters, from the movement's roots in the 1990s to the present. Each chapter is published as a draft first, then marked as published once every claim has been checked against its source.</p>
+  </div>
+  <RecordList items={CHAPTERS} />
+</Base>

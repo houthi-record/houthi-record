@@ -1,0 +1,51 @@
+---
+import Base from '../layouts/Base.astro';
+import RecordList from '../components/RecordList.astro';
+import { CHAPTERS } from '../data/chapters.js';
+---
+<Base section="home">
+  <div class="hero">
+    <span class="label">A documented history · Yemen, 1992 to the present</span>
+    <h1>How a movement from Saada <em>took a state</em>, and what it has done with it.</h1>
+    <p>The story of Ansar Allah, known as the Houthis, told in order and in full: its origins, its wars, its beliefs and its rule. It also records the conduct of the Saudi-led coalition and every other party to the war. Each claim is linked to its source.</p>
+  </div>
+
+  <hr class="rule">
+
+  <section class="two" aria-labelledby="how">
+    <span class="label" id="how">How to read this record</span>
+    <div class="layers">
+      <div class="layer">
+        <h3><span class="sym" aria-hidden="true">■</span>Documented</h3>
+        <p>Established by published evidence: UN reports, court records, official statements, and verified reporting. Every documented claim carries a numbered source.</p>
+      </div>
+      <div class="layer">
+        <h3><span class="sym" aria-hidden="true">□</span>Testimony</h3>
+        <p>An eyewitness account, given as testimony and labelled as such. Where other sources corroborate it, they are cited alongside.</p>
+      </div>
+      <div class="layer">
+        <h3><span class="sym" aria-hidden="true">◇</span>Allegation</h3>
+        <p>A claim that is serious but not yet proven. Published only with supporting evidence, and with the response of the accused party where one exists.</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <section class="two" aria-labelledby="ch">
+    <span class="label" id="ch">Chapters</span>
+    <RecordList items={CHAPTERS} />
+  </section>
+
+  <hr class="rule">
+
+  <section class="two" aria-labelledby="method">
+    <span class="label" id="method">Method</span>
+    <div class="note">
+      <p>This record covers all parties to the war. Coalition airstrikes on homes, markets, hospitals and funerals are documented here with the same standard as Houthi abuses.</p>
+      <p>Names matter in this conflict, so both are given. The movement calls 21 September 2014 a revolution. Its opponents, and the internationally recognised government, call it a coup.</p>
+      <p>Corrections are logged publicly with the date and the change made.</p>
+      <p><a href="/charter/">Read the full charter →</a></p>
+    </div>
+  </section>
+</Base>

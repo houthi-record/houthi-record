@@ -1,0 +1,53 @@
+---
+// Layout for long-form records: chapters and the charter.
+// All fields come from the frontmatter at the top of each .md file.
+import Base from './Base.astro';
+import { SITE } from '../site.js';
+
+const fm = Astro.props.frontmatter ?? Astro.props;
+const {
+  title, dek, kicker, record, period, status, revised,
+  draft = false, sources = [], sourceNote, prev, next, section = 'chapters',
+} = fm;
+const meta = [
+  ['Record', record], ['Period', period], ['Status', status], ['Revised', revised],
+  ['Sources', sources.length ? `${sources.length} cited` : null], ['Language', 'English'],
+].filter(([, v]) => v);
+const jsonld = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: dek,
+  inLanguage: 'en',
+  publisher: { '@type': 'Organization', name: SITE.name, url: SITE.url },
+};
+---
+<Base title={title} description={dek} section={section} type="article" jsonld={jsonld}>
+  <div class="doc">
+    <aside class="docmeta" aria-label="Record details">
+      {meta.map(([k, v]) => <div><span class="label">{k}</span><span class="v">{v}</span></div>)}
+    </aside>
+    <article>
+      <header>
+        {draft && <span class="stamp">Draft · Pending verification</span>}
+        {kicker && <div class="label">{kicker}</div>}
+        <h1>{title}</h1>
+        {dek && <p class="dek">{dek}</p>}
+      </header>
+      <div class="prose"><slot /></div>
+      {sources.length > 0 && (
+        <section class="sources" id="sources" aria-label="Sources">
+          <span class="label">Sources</span>
+          <ol>{sources.map((s, i) => <li id={`s${i + 1}`}>{s}</li>)}</ol>
+          {sourceNote && <p class="caveat">{sourceNote}</p>}
+        </section>
+      )}
+      {(prev || next) && (
+        <div class="pager">
+          {prev ? <a href={prev.href}>← {prev.label}</a> : <span />}
+          {next && (next.href ? <a href={next.href}>{next.label} →</a> : <span class="label">{next.label}</span>)}
+        </div>
+      )}
+    </article>
+  </div>
+</Base>

@@ -1,0 +1,13 @@
+---
+const { items } = Astro.props;
+---
+<ol class="records">
+  {items.map((c) => (
+    <li class={c.href ? 'open' : undefined}>
+      <span class="n">{c.n}</span>
+      <span class="t">{c.href ? <a href={c.href}>{c.title}</a> : c.title}<span>{c.sub}</span></span>
+      <span class="yr">{c.years}</span>
+      <span class="st">{c.status}</span>
+    </li>
+  ))}
+</ol>
