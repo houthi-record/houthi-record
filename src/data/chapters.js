@@ -1,8 +1,8 @@
 // The chapter plan. Set `href` when a chapter is published, and `status` to 'Draft' or 'Published'.
 export const CHAPTERS = [
-  { n: '01', title: 'Roots', sub: 'Zaydi revival, the Believing Youth, Hussein al-Houthi', years: '1992–2004', status: 'In preparation' },
-  { n: '02', title: 'The Saada wars', sub: 'Six rounds of war with the Saleh government', years: '2004–2010', status: 'In preparation' },
-  { n: '03', title: 'Uprising and dialogue', sub: '2011, the GCC deal, the National Dialogue', years: '2011–2014', status: 'In preparation' },
+  { n: '01', title: 'Roots', sub: 'Zaydi revival, the Believing Youth, Hussein al-Houthi', years: '1962–2004', status: 'Draft', href: '/chapters/roots/' },
+  { n: '02', title: 'The Saada wars', sub: 'Six rounds of war with the Saleh government', years: '2004–2010', status: 'Draft', href: '/chapters/the-saada-wars/' },
+  { n: '03', title: 'Uprising and dialogue', sub: '2011, the GCC deal, the National Dialogue', years: '2011–2014', status: 'Draft', href: '/chapters/uprising-and-dialogue/' },
   { n: '04', title: 'The fall of Sanaa', sub: 'From Dammaj to the capital in nine months', years: '2014', status: 'Draft', href: '/chapters/the-fall-of-sanaa/' },
   { n: '05', title: 'The war begins', sub: 'The palace, Aden, and the coalition intervention', years: '2015', status: 'In preparation' },
   { n: '06', title: 'Allies and enemies', sub: "Saleh's killing, Hodeidah, the Stockholm Agreement", years: '2016–2018', status: 'In preparation' },

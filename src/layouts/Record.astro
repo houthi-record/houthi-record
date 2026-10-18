@@ -38,7 +38,13 @@ const jsonld = {
       {sources.length > 0 && (
         <section class="sources" id="sources" aria-label="Sources">
           <span class="label">Sources</span>
-          <ol>{sources.map((s, i) => <li id={`s${i + 1}`}>{s}</li>)}</ol>
+          <ol>{sources.map((s, i) => (
+            <li id={`s${i + 1}`}>
+              {typeof s === 'string' ? s : (
+                <span>{s.text}{s.url && <> <a href={s.url} rel="noopener noreferrer">Link</a></>}{s.archive && <> · <a href={s.archive} rel="noopener noreferrer">Archived copy</a></>}</span>
+              )}
+            </li>
+          ))}</ol>
           {sourceNote && <p class="caveat">{sourceNote}</p>}
         </section>
       )}
