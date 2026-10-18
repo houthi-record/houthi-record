@@ -6,7 +6,7 @@ import '@fontsource/ibm-plex-mono/500.css';
 import '../styles/global.css';
 import { SITE, NAV } from '../site.js';
 
-const { title, description = SITE.description, section = '', type = 'website', jsonld = null } = Astro.props;
+const { title, description = SITE.description, section = '', type = 'website', jsonld = null, noindex = false } = Astro.props;
 const fullTitle = title ? `${title} · ${SITE.name}` : `${SITE.name} · ${SITE.tagline}`;
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
 ---
@@ -18,6 +18,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site).href;
   <title>{fullTitle}</title>
   <meta name="description" content={description}>
   <link rel="canonical" href={canonical}>
+  {noindex && <meta name="robots" content="noindex">}
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="sitemap" href="/sitemap-index.xml">
   <meta property="og:site_name" content={SITE.name}>

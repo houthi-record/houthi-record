@@ -22,7 +22,7 @@ const jsonld = {
   publisher: { '@type': 'Organization', name: SITE.name, url: SITE.url },
 };
 ---
-<Base title={title} description={dek} section={section} type="article" jsonld={jsonld}>
+<Base title={title} description={dek} section={section} type="article" jsonld={jsonld} noindex={draft}>
   <div class="doc">
     <aside class="docmeta" aria-label="Record details">
       {meta.map(([k, v]) => <div><span class="label">{k}</span><span class="v">{v}</span></div>)}
