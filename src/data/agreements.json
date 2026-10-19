@@ -1,0 +1,107 @@
+[
+  {
+    "date": "Jun 2007 · Feb 2008",
+    "name": "Qatari-mediated ceasefire and Doha Agreement",
+    "parties": "Houthis and the Saleh government, mediated by Qatar",
+    "required": "An end to the fourth Saada war, release of prisoners, and exile for Abdulmalik al-Houthi and other leaders in Qatar.",
+    "outcome": "Fighting resumed in May 2008, the fifth round. Each side accused the other of breaking the deal.",
+    "verdict": "Collapsed · both sides accused",
+    "sources": [
+      { "label": "Ahram Online timeline", "url": "https://english.ahram.org.eg/News/126251.aspx" },
+      { "label": "Agreement text, PA-X", "url": "https://pax.peaceagreements.org/agreements/1433" }
+    ]
+  },
+  {
+    "date": "Feb 2010",
+    "name": "Six-point ceasefire",
+    "parties": "Houthis and the Saleh government",
+    "required": "An end to the sixth war, Houthi withdrawal from positions, return of prisoners and captured equipment.",
+    "outcome": "The ceasefire held in Saada, but the Houthis took Munabbih district in April 2010 and fought army-backed tribes in Amran in July.",
+    "verdict": "Partly held",
+    "sources": [
+      { "label": "Agreement text, PA-X", "url": "https://www.peaceagreements.org/view/1434" },
+      { "label": "Ahram Online timeline", "url": "https://english.ahram.org.eg/News/126251.aspx" }
+    ]
+  },
+  {
+    "date": "Jan 2014",
+    "name": "Dammaj ceasefire",
+    "parties": "Houthis and Salafi defenders of Dar al-Hadith, brokered by a presidential commission",
+    "required": "Both sides to pull back from Dammaj, with army troops monitoring.",
+    "outcome": "Implemented by the removal of the Salafi school's leader and students from Saada. The Houthis went on to advance on Amran.",
+    "verdict": "Implemented · in the Houthis' favour",
+    "sources": [
+      { "label": "AFP, 11 Jan 2014", "url": "https://english.ahram.org.eg/News/91344.aspx" }
+    ]
+  },
+  {
+    "date": "21 Sep 2014",
+    "name": "Peace and National Partnership Agreement",
+    "parties": "Houthis and Yemen's main political parties, brokered by the UN",
+    "required": "A new government, a Houthi adviser to the president, removal of protest camps. The security annex required the Houthis to leave the government buildings they had seized.",
+    "outcome": "The Houthis signed the agreement but refused the security annex. They did not leave Sanaa, and four months later seized the presidential palace.",
+    "verdict": "Signed · security terms refused",
+    "sources": [
+      { "label": "Agreement text, UN Peacemaker", "url": "https://peacemaker.un.org/en/node/8834" },
+      { "label": "Asharq al-Awsat, 22 Sep 2014", "url": "https://en-archive.aawsat.com/yemen-houthis-and-government-sign-peace-agreement/" }
+    ]
+  },
+  {
+    "date": "21 Jan 2015",
+    "name": "Nine-point agreement with President Hadi",
+    "parties": "Houthis and President Hadi",
+    "required": "The Houthis to leave the presidential palace and the area around the president's and prime minister's homes, free Hadi's chief of staff, and remove checkpoints. In return, Hadi agreed to changes to the draft constitution and more Houthi posts in the state.",
+    "outcome": "The next day the Houthis were still at the palace and around the president's home, and the chief of staff had not been freed. Hadi resigned that day.",
+    "verdict": "Not implemented",
+    "sources": [
+      { "label": "The New Arab, 22 Jan 2015", "url": "https://www.newarab.com/news/houthis-yet-withdraw-despite-agreement-yemeni-president?amp" },
+      { "label": "Foreign Policy, 22 Jan 2015", "url": "https://foreignpolicy.com/2015/01/22/yemens-president-hadi-yields-to-houthi-demands-but-gunmen-remain/" }
+    ]
+  },
+  {
+    "date": "13 Dec 2018",
+    "name": "Stockholm Agreement",
+    "parties": "Houthis and the Hadi government, brokered by the UN",
+    "required": "A ceasefire in Hodeidah, handover of the city and its three ports to local forces, a prisoner exchange, and talks on Taiz.",
+    "outcome": "The ports were handed to forces the Houthis controlled, which the government rejected. The UN mission was fired on and restricted. The government also suspended cooperation with the envoy. Little moved after 2018.",
+    "verdict": "Largely unimplemented · both sides blamed",
+    "sources": [
+      { "label": "PRIO, Apr 2021", "url": "https://www.prio.org/comments/779" },
+      { "label": "Agreement text, PA-X", "url": "https://pax.peaceagreements.org/agreements/2121" }
+    ]
+  },
+  {
+    "date": "2 Apr 2022",
+    "name": "UN-brokered nationwide truce",
+    "parties": "Houthis, the government and the Saudi-led coalition",
+    "required": "A halt to offensives, fuel ships into Hodeidah, flights from Sanaa, and talks on opening roads around Taiz.",
+    "outcome": "Fighting fell sharply. The Houthi siege of Taiz's roads was not lifted. The truce expired on 2 October 2022 without renewal. The UN envoy thanked the government for engaging positively. Large-scale fighting did not resume until 2026.",
+    "verdict": "Held, then expired",
+    "sources": [
+      { "label": "UN News, Apr 2022", "url": "https://news.un.org/en/story/2022/04/1115392" },
+      { "label": "AP, 2 Oct 2022", "url": "https://english.ahram.org.eg/News/477111.aspx" }
+    ]
+  },
+  {
+    "date": "6 May 2025",
+    "name": "US–Houthi understanding",
+    "parties": "Houthis and the United States, brokered by Oman",
+    "required": "An end to US strikes in exchange for an end to Houthi attacks on US ships.",
+    "outcome": "US strikes stopped. The understanding covered US ships only.",
+    "verdict": "Held for its narrow scope",
+    "sources": [
+      { "label": "Al Jazeera, 6 May 2025", "url": "https://www.aljazeera.com/news/2025/5/6/trump-says-bombing-of-yemen-to-stop-as-oman-confirms-us-houthi-ceasefire" }
+    ]
+  },
+  {
+    "date": "Apr 2022 – Jul 2026",
+    "name": "End of the Saudi–Houthi truce",
+    "parties": "Houthis and Saudi Arabia",
+    "required": "The informal calm between the Houthis and Saudi Arabia that followed the 2022 truce.",
+    "outcome": "In June 2026 Abdulmalik al-Houthi declared readiness for war. On 13 July the runway at Sanaa airport was bombed as a plane carrying a Houthi delegation from Tehran tried to land. The government claimed the strike and the Houthis blamed Saudi Arabia. On 20 July the Houthis declared a blockade of Saudi oil exports.",
+    "verdict": "Ended · disputed trigger",
+    "sources": [
+      { "label": "Arab Center Washington DC, Oct 2026", "url": "https://arabcenterdc.org/resource/why-saudi-arabia-has-returned-to-war-in-yemen/" }
+    ]
+  }
+]

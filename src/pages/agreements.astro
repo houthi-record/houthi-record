@@ -1,0 +1,56 @@
+---
+import Base from '../layouts/Base.astro';
+import AGREEMENTS from '../data/agreements.json';
+---
+<Base title="The agreements record" description="Every ceasefire and agreement the Houthi movement has signed since 2007, what each required, and what happened next, with sources." section="agreements" noindex={true}>
+  <div class="page-head">
+    <span class="label">The agreements record · draft</span>
+    <h1>What was signed, and what happened</h1>
+    <p>Each ceasefire and agreement the Houthi movement has entered since 2007, set out in the same way: what it required, and what happened next. Where the other side also failed to keep its terms, that is recorded too.</p>
+  </div>
+
+  <ol class="agr">
+    {AGREEMENTS.map((a) => (
+      <li>
+        <div class="agr-head">
+          <span class="d">{a.date}</span>
+          <h2>{a.name}</h2>
+          <span class="verdict">{a.verdict}</span>
+        </div>
+        <dl>
+          <div><dt class="label">Parties</dt><dd>{a.parties}</dd></div>
+          <div><dt class="label">Required</dt><dd>{a.required}</dd></div>
+          <div><dt class="label">What happened</dt><dd>{a.outcome}</dd></div>
+          <div><dt class="label">Sources</dt><dd class="src">{a.sources.map((s) => <a href={s.url} rel="noopener noreferrer">{s.label}</a>)}</dd></div>
+        </dl>
+      </li>
+    ))}
+  </ol>
+
+  <section class="note pattern" aria-labelledby="pat">
+    <span class="label" id="pat">◇ Analysis · the pattern</span>
+    <p>Two kinds of terms recur in these agreements. The first gives the movement something it wants: a role in government, an end to a siege of its own areas, flights and fuel. The second requires it to give up ground or weapons: leave buildings, hand over ports, open roads.</p>
+    <p>In this record, the movement has generally accepted the first kind and resisted the second. In September 2014 it signed the political agreement and refused the security annex. In January 2015 it won constitutional concessions and stayed at the palace. In 2018 and 2022, the ports of Hodeidah and the roads of Taiz stayed under its control.</p>
+    <p>Its opponents have also broken terms, and the record says so where they did. The difference is in what each failure changed. In this record, the movement's failures to withdraw left it holding more territory than before.</p>
+  </section>
+</Base>
+
+<style>
+  .agr { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--ink); }
+  .agr li { padding-block: 1.75rem; border-bottom: 1px solid var(--rule); display: grid; gap: 1rem; }
+  .agr-head { display: grid; grid-template-columns: 9rem minmax(0, 1fr) auto; gap: 1rem; align-items: baseline; }
+  .agr-head .d { font-family: var(--mono); font-size: 0.75rem; color: var(--ink-3); }
+  .agr-head h2 { font-size: 1.375rem; line-height: 1.3; }
+  .verdict { font-family: var(--mono); font-size: 0.6875rem; letter-spacing: 0.06em; text-transform: uppercase; border: 1px solid var(--ink-3); padding: 0.2rem 0.5rem; white-space: nowrap; }
+  .agr dl { margin: 0; display: grid; gap: 0.6rem; padding-left: 10rem; max-width: calc(var(--measure) + 10rem); }
+  .agr dl div { display: grid; grid-template-columns: 8rem minmax(0, 1fr); gap: 1rem; }
+  .agr dd { margin: 0; color: var(--ink-2); font-size: 1rem; }
+  .agr .src { display: flex; flex-wrap: wrap; gap: 0.4rem 1rem; font-family: var(--mono); font-size: 0.75rem; }
+  .pattern { margin-top: 3rem; border: 1px dashed var(--ink-3); padding: 1.5rem; background: var(--sheet); max-width: calc(var(--measure) + 3rem); }
+  @media (max-width: 720px) {
+    .agr-head { grid-template-columns: minmax(0, 1fr); gap: 0.4rem; }
+    .verdict { justify-self: start; }
+    .agr dl { padding-left: 0; }
+    .agr dl div { grid-template-columns: minmax(0, 1fr); gap: 0.15rem; }
+  }
+</style>

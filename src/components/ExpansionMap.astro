@@ -1,0 +1,127 @@
+---
+// A step-through map of the movement's expansion, plotted by coordinates.
+// Data: src/data/expansion.json. No borders are drawn, so nothing on it is a disputed line.
+import DATA from '../data/expansion.json';
+
+const LON0 = 42.4, LON1 = 45.8, LAT0 = 12.3, LAT1 = 17.3;
+const K = 112, PAD = 34;
+const W = Math.round((LON1 - LON0) * K + PAD * 2);
+const H = Math.round((LAT1 - LAT0) * K + PAD * 2);
+const xy = (p) => [Math.round(PAD + (p.lon - LON0) * K), Math.round(PAD + (LAT1 - p.lat) * K)];
+
+const steps = DATA.steps.map((s, i) => {
+  const p = DATA.places[s.place];
+  const [x, y] = xy(p);
+  const f = s.from ? xy(DATA.places[s.from]) : null;
+  return { ...s, i, x, y, name: p.name, fx: f && f[0], fy: f && f[1] };
+});
+const lats = [13, 14, 15, 16, 17];
+const lons = [43, 44, 45];
+const STATUS = { held: 'Held', lost: 'Taken, then lost', contested: 'Contested', attacked: 'Attacked, not taken' };
+// Label placement: keep labels clear of each other and the frame.
+const anchor = { dammaj: ['start', 10, 14], saada: ['start', 10, -6], marran: ['end', -10, -6], perim: ['start', 10, 4], aden: ['start', 10, 4], marib: ['end', -10, -8], mokha: ['end', -10, 4], hodeidah: ['end', -10, 4] };
+---
+<figure class="xmap" aria-labelledby="xmap-cap">
+  <div class="xmap-grid">
+    <svg viewBox={`0 0 ${W} ${H}`} role="img" aria-labelledby="xmap-title">
+      <title id="xmap-title">The Houthi movement's expansion from Marran to the Bab al-Mandab strait, 2002–2026, places plotted by coordinates</title>
+      <g class="grat">
+        {lats.map((la) => { const y = PAD + (LAT1 - la) * K; return <g><line x1={PAD} x2={W - PAD} y1={y} y2={y} /><text x={W - PAD} y={y - 4} text-anchor="end">{la}°N</text></g>; })}
+        {lons.map((lo) => { const x = PAD + (lo - LON0) * K; return <g><line y1={PAD} y2={H - PAD} x1={x} x2={x} /><text x={x + 4} y={H - PAD + 14}>{lo}°E</text></g>; })}
+      </g>
+      {steps.filter((s) => s.fx != null).map((s) => <line class="route pt-line" data-step={s.i} x1={s.fx} y1={s.fy} x2={s.x} y2={s.y} />)}
+      {steps.map((s) => {
+        const a = anchor[s.place] || ['start', 10, 4];
+        return (
+          <g class={`pt st-${s.status}`} data-step={s.i}>
+            {s.place === 'sanaa' ? <rect x={s.x - 5} y={s.y - 5} width="10" height="10" /> : <circle cx={s.x} cy={s.y} r="4.5" />}
+            <text class="nm" x={s.x + a[1]} y={s.y + a[2]} text-anchor={a[0]}>{s.name}</text>
+          </g>
+        );
+      })}
+    </svg>
+
+    <div class="xmap-side">
+      <div class="xmap-ctl" role="group" aria-label="Step through the map">
+        <button type="button" data-dir="-1" aria-label="Previous step">←</button>
+        <span class="label" aria-live="polite"><span data-count>{steps.length}</span> / {steps.length}</span>
+        <button type="button" data-dir="1" aria-label="Next step">→</button>
+        <button type="button" data-all>All</button>
+      </div>
+      <ol class="xmap-list">
+        {steps.map((s) => (
+          <li data-step={s.i}>
+            <button type="button" data-go={s.i}>
+              <span class="d">{s.date}</span>
+              <span class="t">{s.title}</span>
+            </button>
+            <div class="xmap-detail">
+              <p>{s.text}</p>
+              <span class="meta"><span>{STATUS[s.status]}</span>{s.sources.map((src) => <a href={src.url} rel="noopener noreferrer">{src.label}</a>)}</span>
+            </div>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </div>
+  <figcaption id="xmap-cap">
+    <span class="label">Map · Expansion, 2002–2026</span>
+    <span>Places plotted by latitude and longitude. Borders, coastline and areas of control are not drawn, so the map shows only where each step happened. Filled marks are still held, open marks were taken and lost or are contested. Marran's position is approximate.</span>
+  </figcaption>
+</figure>
+
+<style>
+  .xmap { margin: 0 0 3rem; border-block: 1px solid var(--rule); padding-block: 1.5rem; }
+  .xmap-grid { display: grid; grid-template-columns: minmax(0, 26rem) minmax(0, 1fr); gap: 2.5rem; align-items: start; }
+  .xmap svg { width: 100%; height: auto; display: block; position: sticky; top: 5.5rem; }
+  .grat line { stroke: var(--rule); stroke-width: 1; }
+  .grat text { font-family: var(--mono); font-size: 10px; fill: var(--ink-3); }
+  .route { fill: none; stroke: var(--ink-3); stroke-width: 1; stroke-dasharray: 4 4; }
+  .pt circle, .pt rect { fill: var(--ink); stroke: var(--ink); stroke-width: 1.2; transition: opacity .2s; }
+  .pt.st-lost circle, .pt.st-contested circle, .pt.st-attacked circle { fill: var(--paper); }
+  .pt .nm { font-family: var(--serif); font-size: 14px; fill: var(--ink); }
+  .pt.dim, .pt-line.dim { opacity: .15; }
+  .pt-line.cur { stroke: var(--ink); stroke-dasharray: none; }
+  .pt.cur circle, .pt.cur rect { stroke-width: 3; }
+  .xmap-ctl { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; }
+  .xmap-ctl button { font-family: var(--mono); font-size: 0.75rem; background: none; color: var(--ink); border: 1px solid var(--rule); padding: 0.3rem 0.65rem; cursor: pointer; }
+  .xmap-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--ink); }
+  .xmap-list li { border-bottom: 1px solid var(--rule); }
+  .xmap-list li > button { display: grid; grid-template-columns: 6.5rem minmax(0, 1fr); gap: 1rem; width: 100%; text-align: left; background: none; border: 0; padding: 0.55rem 0; cursor: pointer; color: var(--ink); font: inherit; }
+  .xmap-list .d { font-family: var(--mono); font-size: 0.75rem; color: var(--ink-3); padding-top: 0.2rem; }
+  .xmap-list .t { font-size: 1.05rem; }
+  .xmap-detail { padding: 0 0 0.8rem 7.5rem; display: grid; gap: 0.35rem; }
+  .xmap-detail p { font-size: 0.95rem; color: var(--ink-2); }
+  .xmap-detail .meta { display: flex; gap: 0.9rem; flex-wrap: wrap; font-family: var(--mono); font-size: 0.6875rem; color: var(--ink-3); }
+  .xmap-list li.dim > button { color: var(--ink-3); }
+  .xmap-list li.cur > button .t { text-decoration: underline; text-underline-offset: 4px; }
+  .xmap figcaption { font-size: 0.9rem; color: var(--ink-2); margin-top: 1.25rem; display: grid; gap: 0.3rem; max-width: 46rem; }
+  @media (max-width: 820px) {
+    .xmap-grid { grid-template-columns: minmax(0, 1fr); gap: 1.5rem; }
+    .xmap svg { max-width: 26rem; margin: 0 auto; position: static; }
+    .xmap-detail { padding-left: 0; }
+  }
+</style>
+
+<script is:inline>
+  (function () {
+    document.querySelectorAll('.xmap').forEach(function (fig) {
+      var pts = fig.querySelectorAll('.pt, .pt-line');
+      var items = fig.querySelectorAll('.xmap-list li');
+      var n = items.length, cur = n - 1, all = true;
+      var counter = fig.querySelector('[data-count]');
+      function render() {
+        pts.forEach(function (p) { var i = +p.dataset.step; p.classList.toggle('dim', !all && i > cur); p.classList.toggle('cur', !all && i === cur); });
+        items.forEach(function (li) { var i = +li.dataset.step; li.classList.toggle('dim', !all && i > cur); li.classList.toggle('cur', !all && i === cur); });
+        counter.textContent = String(cur + 1);
+      }
+      fig.querySelectorAll('[data-dir]').forEach(function (b) {
+        b.addEventListener('click', function () { all = false; cur = Math.max(0, Math.min(n - 1, cur + (+b.dataset.dir))); render(); });
+      });
+      fig.querySelectorAll('[data-go]').forEach(function (b) {
+        b.addEventListener('click', function () { all = false; cur = +b.dataset.go; render(); });
+      });
+      fig.querySelector('[data-all]').addEventListener('click', function () { all = true; cur = n - 1; render(); });
+    });
+  })();
+</script>

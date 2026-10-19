@@ -1,0 +1,219 @@
+{
+  "note": "Places are plotted by latitude and longitude. Marran's position is approximate. status: held = still under Houthi control; lost = taken and later lost; contested = fighting ongoing; attacked = attacked but not taken. Lines join each place to the place the advance came from.",
+  "places": {
+    "marran": {
+      "name": "Marran",
+      "lat": 16.84,
+      "lon": 43.4
+    },
+    "saada": {
+      "name": "Saada",
+      "lat": 16.94,
+      "lon": 43.76
+    },
+    "dammaj": {
+      "name": "Dammaj",
+      "lat": 16.89,
+      "lon": 43.8
+    },
+    "amran": {
+      "name": "Amran",
+      "lat": 15.66,
+      "lon": 43.94
+    },
+    "sanaa": {
+      "name": "Sanaa",
+      "lat": 15.37,
+      "lon": 44.19
+    },
+    "hodeidah": {
+      "name": "Hodeidah",
+      "lat": 14.8,
+      "lon": 42.95
+    },
+    "taiz": {
+      "name": "Taiz",
+      "lat": 13.58,
+      "lon": 44.02
+    },
+    "aden": {
+      "name": "Aden",
+      "lat": 12.79,
+      "lon": 45.03
+    },
+    "marib": {
+      "name": "Marib",
+      "lat": 15.46,
+      "lon": 45.32
+    },
+    "mokha": {
+      "name": "Mokha",
+      "lat": 13.32,
+      "lon": 43.25
+    },
+    "perim": {
+      "name": "Perim · Bab al-Mandab",
+      "lat": 12.65,
+      "lon": 43.42
+    }
+  },
+  "steps": [
+    {
+      "date": "2002–2004",
+      "place": "marran",
+      "status": "held",
+      "title": "A base in the mountains",
+      "text": "Hussein al-Houthi teaches and organises from Marran, west of Saada. The first war begins here in 2004.",
+      "sources": [
+        {
+          "label": "Ahram Online timeline",
+          "url": "https://english.ahram.org.eg/News/126251.aspx"
+        }
+      ]
+    },
+    {
+      "date": "Mar 2011",
+      "place": "saada",
+      "status": "held",
+      "title": "Saada governorate",
+      "text": "During the uprising against Saleh, the movement takes control of Saada and sets up its own administration.",
+      "sources": [
+        {
+          "label": "Ahram Online timeline",
+          "url": "https://english.ahram.org.eg/News/126251.aspx"
+        }
+      ],
+      "from": "marran"
+    },
+    {
+      "date": "Jan 2014",
+      "place": "dammaj",
+      "status": "held",
+      "title": "Dammaj",
+      "text": "The siege of the Salafi school ends with its students removed from Saada.",
+      "sources": [
+        {
+          "label": "AFP, 11 Jan 2014",
+          "url": "https://english.ahram.org.eg/News/91344.aspx"
+        }
+      ],
+      "from": "saada"
+    },
+    {
+      "date": "8 Jul 2014",
+      "place": "amran",
+      "status": "held",
+      "title": "Amran",
+      "text": "The 310th Armoured Brigade is overrun, 50 km north of the capital.",
+      "sources": [
+        {
+          "label": "Critical Threats, 9 Jul 2014",
+          "url": "https://criticalthreats.org/analysis/the-al-houthi-victory-in-amran"
+        }
+      ],
+      "from": "dammaj"
+    },
+    {
+      "date": "21 Sep 2014",
+      "place": "sanaa",
+      "status": "held",
+      "title": "Sanaa",
+      "text": "The capital falls after six days of fighting.",
+      "sources": [
+        {
+          "label": "AFP, 21 Sep 2014",
+          "url": "https://english.ahram.org.eg/News/111330.aspx"
+        }
+      ],
+      "from": "amran"
+    },
+    {
+      "date": "Oct 2014",
+      "place": "hodeidah",
+      "status": "held",
+      "title": "Hodeidah",
+      "text": "The movement takes Yemen's main Red Sea port.",
+      "sources": [
+        {
+          "label": "Arab Center Washington DC",
+          "url": "https://arabcenterdc.org/resource/a-timeline-of-the-yemen-crisis-from-the-1990s-to-the-present/"
+        }
+      ],
+      "from": "sanaa"
+    },
+    {
+      "date": "Mar 2015",
+      "place": "taiz",
+      "status": "contested",
+      "title": "Taiz",
+      "text": "Houthi forces seize parts of Taiz and besiege the rest of the city. The siege continues.",
+      "sources": [
+        {
+          "label": "Arab Center Washington DC",
+          "url": "https://arabcenterdc.org/resource/a-timeline-of-the-yemen-crisis-from-the-1990s-to-the-present/"
+        }
+      ],
+      "from": "sanaa"
+    },
+    {
+      "date": "25 Mar 2015",
+      "place": "aden",
+      "status": "lost",
+      "title": "Aden",
+      "text": "Houthi forces storm Aden. The next day the Saudi-led coalition intervenes. By September the city is back under government control.",
+      "sources": [
+        {
+          "label": "Ahram Online timeline",
+          "url": "https://english.ahram.org.eg/News/126251.aspx"
+        },
+        {
+          "label": "Arab Center Washington DC",
+          "url": "https://arabcenterdc.org/resource/a-timeline-of-the-yemen-crisis-from-the-1990s-to-the-present/"
+        }
+      ],
+      "from": "taiz"
+    },
+    {
+      "date": "2020–2022",
+      "place": "marib",
+      "status": "attacked",
+      "title": "Marib",
+      "text": "A long offensive on the government's last northern stronghold. The city does not fall.",
+      "sources": [
+        {
+          "label": "Middle East Institute, 2021",
+          "url": "https://mei.edu/publication/houthis-and-limits-diplomacy-yemen/"
+        }
+      ],
+      "from": "sanaa"
+    },
+    {
+      "date": "10 Sep 2026",
+      "place": "mokha",
+      "status": "contested",
+      "title": "Mokha",
+      "text": "Government forces withdraw from the port as the Houthis advance down the coast.",
+      "sources": [
+        {
+          "label": "Arab Center Washington DC, Oct 2026",
+          "url": "https://arabcenterdc.org/resource/why-saudi-arabia-has-returned-to-war-in-yemen/"
+        }
+      ],
+      "from": "hodeidah"
+    },
+    {
+      "date": "11 Sep 2026",
+      "place": "perim",
+      "status": "contested",
+      "title": "Bab al-Mandab",
+      "text": "The movement seizes Perim and the Hanish islands, taking the strait through which about 7% of the world's oil passes. A government counteroffensive begins in October.",
+      "sources": [
+        {
+          "label": "House of Commons Library, Oct 2026",
+          "url": "https://commonslibrary.parliament.uk/research-briefings/cbp-10427/"
+        }
+      ],
+      "from": "mokha"
+    }
+  ]
+}

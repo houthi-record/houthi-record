@@ -1,6 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import EVENTS from '../data/timeline.json';
+import ExpansionMap from '../components/ExpansionMap.astro';
 
 const PARTIES = {
   houthi: 'Houthi movement',
@@ -18,6 +19,8 @@ const years = [...new Set(EVENTS.map((e) => e.year))];
     <h1>Key events, in order</h1>
     <p>Filter by party. Each event links to its sources and, where written, to its chapter.</p>
   </div>
+  <ExpansionMap />
+  <h2 class="label" style="margin-bottom:1rem">All events</h2>
   <div class="filters" role="group" aria-label="Filter by party">
     <button type="button" data-f="all" aria-pressed="true">All parties</button>
     {Object.entries(PARTIES).map(([k, v]) => <button type="button" data-f={k} aria-pressed="false">{v}</button>)}

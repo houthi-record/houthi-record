@@ -8,7 +8,7 @@ export const CHAPTERS = [
   { n: '06', title: 'Allies and enemies', sub: "Saleh's killing, Hodeidah, the Stockholm Agreement", years: '2016–2018', status: 'In preparation' },
   { n: '07', title: 'How they govern', sub: 'Supervisors, economy, schools, detention', years: '2014–', status: 'In preparation' },
   { n: '08', title: 'Beyond Yemen', sub: 'The Red Sea, Israel, and regional reach', years: '2019–', status: 'In preparation' },
-  { n: '09', title: 'Beliefs and aims', sub: 'The slogan, the lectures, the stated goals', years: '—', status: 'In preparation' },
+  { n: '09', title: 'Beliefs and aims', sub: 'The slogan, the lectures, the stated goals', years: '2000–2026', status: 'Draft', href: '/chapters/beliefs-and-aims/' },
 ];
 
 // The planned archive of primary documents.

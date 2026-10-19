@@ -12,6 +12,7 @@ export const NAV = [
   { href: '/', label: 'Index', key: 'home' },
   { href: '/timeline/', label: 'Timeline', key: 'timeline' },
   { href: '/chapters/', label: 'Chapters', key: 'chapters' },
+  { href: '/agreements/', label: 'Agreements', key: 'agreements' },
   { href: '/documents/', label: 'Documents', key: 'documents' },
   { href: '/charter/', label: 'Charter', key: 'charter' },
 ];
