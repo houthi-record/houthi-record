@@ -89,9 +89,9 @@ On 21 September the Houthis seized the government headquarters and other key ins
 
 That night the Houthis and the main political parties signed the Peace and National Partnership Agreement, brokered by the UN envoy Jamal Benomar.<sup><a href="#s12">12</a></sup> It called for a new prime minister and a government of technocrats, an adviser to the president from the Houthis, and the removal of the protest camps. The Houthis refused to sign the security annex, which required them to leave the government buildings they had taken.<sup><a href="#s13">13</a></sup> They did not leave. <span class="ev-tag">■ Documented</span>
 
-<div class="both" role="note" aria-label="Two names for the same day">
-  <div><span class="label">The movement calls it</span><p>The 21 September Revolution, marked each year as a national holiday in areas under its control.</p></div>
-  <div><span class="label">Its opponents call it</span><p>The coup of 21 September, the term used by the internationally recognised government and its allies.</p></div>
+<div class="both" role="note" aria-label="What happened on 21 September">
+  <div><span class="label">What the movement calls it</span><p>The 21 September Revolution, a public holiday in the areas it controls.</p></div>
+  <div><span class="label">What happened</span><p>An armed movement took the capital by force, eight months after the end of a National Dialogue it had taken part in, and kept it. Within five months it had placed the president under house arrest and dissolved parliament.</p></div>
 </div>
 
 <h2><span class="label">IV · Why the army stood aside</span>The Saleh factor</h2>

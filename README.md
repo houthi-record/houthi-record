@@ -26,6 +26,15 @@ Every change pushed to the `main` branch is published automatically.
 4. **Corrections are logged.** When a published claim changes, add an entry to the corrections page with the date, the original text and the new text.
 5. **Protect people.** No names of private individuals, witnesses or victims without their consent. Remove metadata from every image and document before adding it.
 
+## Voice
+
+1. **Say what happened, plainly, in our own voice.** When a fact is documented, state it. Do not write "X says" or "according to" for things that are established.
+2. **Attribute only what is genuinely contested.** A party's claim or a single-source figure is attributed in one clause, then set against the record. It is never left for the reader to weigh as if both sides were equal.
+3. **Primary sources first.** Use the movement's own texts, laws and speeches, official documents and UN findings. Use research centres and NGOs for facts they documented, not for their interpretations.
+4. **Context with every event.** Say what came before, what the party said it wanted, and what it did next.
+5. **One standard for every party.** Coalition and government abuses are recorded in the same voice and to the same standard.
+6. **No claim without a source,** however certain we are. If something is still being researched, say so.
+
 ## Adding a source to a timeline event
 
 In `src/data/timeline.json`, each event has a `sources` list:

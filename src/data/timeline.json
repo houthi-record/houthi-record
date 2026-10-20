@@ -245,6 +245,20 @@
   },
   {
     "year": "2015",
+    "date": "24 Mar 2015",
+    "party": "govt",
+    "title": "Hadi asks for military intervention",
+    "summary": "From Aden, President Hadi writes to the Gulf states, the Arab League and the UN Security Council asking for \"all means necessary, including military intervention\" against the Houthi advance.",
+    "evidence": "documented",
+    "sources": [
+      {
+        "label": "AP, 24 Mar 2015 (Hadi's letter)",
+        "url": "https://www.militarytimes.com/news/your-military/2015/03/24/yemen-president-asks-u-n-to-invite-countries-to-oust-rebels/"
+      }
+    ]
+  },
+  {
+    "year": "2015",
     "date": "25 Mar 2015",
     "party": "houthi",
     "title": "Houthi forces storm Aden",
@@ -266,9 +280,13 @@
     "date": "26 Mar 2015",
     "party": "coalition",
     "title": "Coalition intervention begins",
-    "summary": "A Saudi-led coalition launches airstrikes in support of Hadi's government.",
+    "summary": "A Saudi-led coalition launches airstrikes, two days after President Hadi asked the Gulf states and the Arab League in writing for military intervention against the Houthi advance.",
     "evidence": "documented",
     "sources": [
+      {
+        "label": "AP, 24 Mar 2015 (Hadi's letter)",
+        "url": "https://www.militarytimes.com/news/your-military/2015/03/24/yemen-president-asks-u-n-to-invite-countries-to-oust-rebels/"
+      },
       {
         "label": "Ahram Online timeline",
         "url": "https://english.ahram.org.eg/News/126251.aspx"
@@ -323,6 +341,20 @@
   },
   {
     "year": "2017",
+    "date": "Sep 2017",
+    "party": "houthi",
+    "title": "Shelling of Taiz",
+    "summary": "Human Rights Watch reports more than two years of Houthi-Saleh artillery fire into Taiz's residential neighbourhoods. In one weekend, three children are killed, two of them playing football.",
+    "evidence": "documented",
+    "sources": [
+      {
+        "label": "Human Rights Watch, 18 Sep 2017",
+        "url": "https://www.hrw.org/news/2017/09/18/yemens-children-are-being-shelled-while-world-sits-back"
+      }
+    ]
+  },
+  {
+    "year": "2017",
     "date": "4 Dec 2017",
     "party": "houthi",
     "title": "Saleh killed",
@@ -369,6 +401,20 @@
   },
   {
     "year": "2019",
+    "date": "Apr 2019",
+    "party": "houthi",
+    "title": "Landmines on the western coast",
+    "summary": "Human Rights Watch documents Houthi landmines in farmland, villages, wells and roads around Hodeidah and Taiz, including anti-vehicle mines altered to explode under a person's weight and explosive devices disguised as rocks. At least 140 civilians, 19 of them children, were killed there from 2018.",
+    "evidence": "documented",
+    "sources": [
+      {
+        "label": "Human Rights Watch, 22 Apr 2019",
+        "url": "https://www.hrw.org/news/2019/04/22/yemen-houthi-landmines-kill-civilians-block-aid"
+      }
+    ]
+  },
+  {
+    "year": "2019",
     "date": "14 Sep 2019",
     "party": "houthi",
     "title": "Abqaiq and Khurais attack",
@@ -382,6 +428,38 @@
       {
         "label": "Al Jazeera, 9 Jan 2020 (UN monitors)",
         "url": "https://www.aljazeera.com/news/2020/1/9/un-monitors-say-houthis-not-behind-saudi-aramco-attacks-report"
+      }
+    ]
+  },
+  {
+    "year": "2020",
+    "date": "30 Dec 2020",
+    "party": "houthi",
+    "title": "Missile attack on Aden airport",
+    "summary": "Missiles hit Aden airport as the new cabinet arrives, killing at least 22 people, including three Red Cross staff. UN experts find the missiles were fired from Houthi-held Taiz airport and Dhamar.",
+    "evidence": "documented",
+    "sources": [
+      {
+        "label": "Reuters via Ahram, 30 Mar 2021",
+        "url": "https://english.ahram.org.eg/News/408111.aspx"
+      }
+    ]
+  },
+  {
+    "year": "2021",
+    "date": "Jan–Jun 2021",
+    "party": "houthi",
+    "title": "Missiles on Marib",
+    "summary": "The government counts more than 55 ballistic missiles fired at Marib governorate in five months, with 104 civilians killed. Marib holds Yemen's largest oil and gas fields and most of its displaced people.",
+    "evidence": "documented",
+    "sources": [
+      {
+        "label": "Arab News, 12 Jun 2021 (government figures)",
+        "url": "https://www.arabnews.com/middle-east/houthis-fired-55-iranian-made-ballistic-missiles-at-marib-since-start-of-2021-yemen-information-minister-1875336"
+      },
+      {
+        "label": "Al Jazeera, 14 Sep 2026",
+        "url": "https://www.aljazeera.com/news/2026/9/14/why-the-houthi-advance-towards-yemens-marib-taiz-matters"
       }
     ]
   },
@@ -516,12 +594,16 @@
     "date": "16 Jun 2026",
     "party": "houthi",
     "title": "Abdulmalik al-Houthi declares readiness for war",
-    "summary": "He calls for action against what he describes as more than eleven years of Saudi aggression and blockade.",
+    "summary": "He calls for action against what he describes as more than eleven years of Saudi aggression and blockade. The coalition intervened in March 2015 at the written request of Yemen's president.",
     "evidence": "documented",
     "sources": [
       {
         "label": "Arab Center Washington DC, Oct 2026",
         "url": "https://arabcenterdc.org/resource/why-saudi-arabia-has-returned-to-war-in-yemen/"
+      },
+      {
+        "label": "AP, 24 Mar 2015 (Hadi's letter)",
+        "url": "https://www.militarytimes.com/news/your-military/2015/03/24/yemen-president-asks-u-n-to-invite-countries-to-oust-rebels/"
       }
     ]
   },
@@ -579,8 +661,8 @@
     "year": "2026",
     "date": "15 Sep 2026",
     "party": "coalition",
-    "title": "Saudi Arabia says a Houthi drone targeted Mecca",
-    "summary": "The coalition says it shot down a drone before it entered Mecca's airspace, the second such attempt after a missile in July 2017. The Houthis deny it and say they target only military and oil sites.",
+    "title": "Houthi drone shot down on course for Mecca",
+    "summary": "Saudi air defences destroy a Houthi drone heading for Mecca, according to the coalition, which intercepted a ballistic missile headed for the city in July 2017. The movement denies aiming at Mecca, while striking Saudi airports and cities the same weeks.",
     "evidence": "allegation",
     "sources": [
       {
