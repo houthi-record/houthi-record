@@ -35,9 +35,7 @@ next: { href: /agreements/, label: "The agreements record" }
 
 <h2><span class="label">I · What it is</span>A project for the umma, not a Yemeni party</h2>
 
-The movement calls itself *al-Masira al-Qur'aniya*, the Quranic March. Its official website defines the March by three pillars: "the umma, the leadership, and the project" (*الأمة، والقيادة، والمشروع*).<sup><a href="#s1">1</a></sup> The umma is the whole Muslim world. Yemen is not one of the pillars.
-
-This is the first thing to understand about the movement, and the thing most often missed. It does not seek a share of power in Yemen as one party among others. It sees itself as the leadership the whole Muslim world should follow, and Yemen as the place where that leadership began.
+The movement calls itself *al-Masira al-Qur'aniya*, the Quranic March. Its official website defines the March by three pillars: "the umma, the leadership, and the project" (*الأمة، والقيادة، والمشروع*).<sup><a href="#s1">1</a></sup> The umma is the whole Muslim world.
 
 <h2><span class="label">II · 2012</span>A family chosen by God</h2>
 
@@ -48,9 +46,7 @@ The movement's Intellectual and Cultural Document, issued in February 2012 under
   <div><span class="label">Translation</span><p>"We believe that God, glory be to Him, chose the household of the Messenger of God."</p></div>
 </div>
 
-The document names Ali ibn Abi Talib as the Prophet's rightful successor.<sup><a href="#s2">2</a></sup> In this belief, the right to lead Muslims does not come from elections, agreements or the consent of the governed. It comes from God, and it belongs to one bloodline. The movement's leader carries the title *'alam al-huda*, "the banner of guidance", and his followers owe him obedience as a religious duty.<sup><a href="#s9">9</a></sup>
-
-This explains why the movement could sit in Yemen's National Dialogue for ten months in 2013 and then take the capital by force in 2014. An agreement among Yemenis cannot bind a leadership that believes its authority comes from God.
+The document names Ali ibn Abi Talib as the Prophet's rightful successor.<sup><a href="#s2">2</a></sup> The movement's leader carries the title *'alam al-huda*, "the banner of guidance", and his followers owe him obedience as a religious duty.<sup><a href="#s9">9</a></sup>
 
 <h2><span class="label">III · 2002</span>The slogan</h2>
 
@@ -69,21 +65,19 @@ Hussein al-Houthi did not present himself as a reformer of the Zaydi tradition h
 
 In the same lectures he holds up a different model. "Imam Khomeini was a just imam, a pious imam," he says in *خطر دخول أمريكا اليمن*. He calls Khomeini a mercy from God that the Arabs failed to use, and points his students to Hezbollah's Hassan Nasrallah.<sup><a href="#s4">4</a></sup><sup><a href="#s5">5</a></sup>
 
-The movement is therefore not a continuation of Yemeni Zaydism. It is a new movement that took Zaydi descent and language and joined them to the revolutionary model of Iran.
-
 <h2><span class="label">V · 2020–2022</span>The belief written into law</h2>
 
 Yemen's constitution states in Article 41 that all citizens are equal in public rights and duties.<sup><a href="#s6">6</a></sup>
 
-In 2020 the movement's authorities in Sanaa issued bylaws to the Zakat Law that impose a levy of one fifth (*khums*) on minerals, oil and gas, water, fisheries and "everything that is extracted from the sea". The bylaws divide the levy into six shares. One goes to the *wali al-amr*, the ruler, which in Houthi-held Yemen means Abdulmalik al-Houthi, to spend as he chooses. The Hashemites, the family the movement believes God chose, are the main beneficiaries of most of the rest.<sup><a href="#s7">7</a></sup> A share of the country's natural wealth is reserved by birth, and another is placed in the hands of one man.
+In 2020 the movement's authorities in Sanaa issued bylaws to the Zakat Law that impose a levy of one fifth (*khums*) on minerals, oil and gas, water, fisheries and "everything that is extracted from the sea". The bylaws divide the levy into six shares. One goes to the *wali al-amr*, the ruler, which in Houthi-held Yemen means Abdulmalik al-Houthi, to spend as he chooses. The Hashemites, the family the movement believes God chose, are the main beneficiaries of most of the rest.<sup><a href="#s7">7</a></sup>
 
-In November 2022 they approved a code of conduct for state employees. It defines government work as a form of worship, makes the leader's speeches and Hussein al-Houthi's lectures its reference, and requires civil servants to attend courses built on those lectures.<sup><a href="#s8">8</a></sup> A post in the civil service now carries a duty of religious loyalty to the leader.
+In November 2022 they approved a code of conduct for state employees. It defines government work as a form of worship, makes the leader's speeches and Hussein al-Houthi's lectures its reference, and requires civil servants to attend courses built on those lectures.<sup><a href="#s8">8</a></sup>
 
 <h2><span class="label">VI · Marib</span>"The gate to Jerusalem"</h2>
 
 In 2021, as Houthi forces attacked Marib, the senior official Mohammed al-Bukhaiti called the city "the gate to Jerusalem" and said the fighters were "implementing the will and orders of God".<sup><a href="#s9">9</a></sup>
 
-Marib is not on any road to Jerusalem. It is a desert province in eastern Yemen, and it holds the country's largest oil and gas fields.<sup><a href="#s10">10</a></sup> It was also the government's last stronghold in the north, and the refuge of more than half of Yemen's displaced people. The religious language described a battle for Yemen's oil and gas and for the government's last northern foothold.
+Marib is not on any road to Jerusalem. It is a desert province in eastern Yemen, and it holds the country's largest oil and gas fields.<sup><a href="#s10">10</a></sup> It was also the government's last stronghold in the north, and the refuge of more than half of Yemen's displaced people.
 
 <h2><span class="label">VII · Saudi Arabia and Mecca</span>The holy cities as a cause</h2>
 
@@ -91,13 +85,4 @@ The movement's language about Saudi Arabia rests on a claim it repeats in every 
 
 In June 2024 a Houthi Hajj delegation, led by the head of the movement's military council, was filmed in Mecca pledging allegiance to God, the Prophet, Imam Ali, and then Abdulmalik al-Houthi.<sup><a href="#s11">11</a></sup> In August 2026 Abdulmalik called Saudi Arabia "the Kingdom of the Devil's Horn", accused it of opening "the airspace of the Two Holy Sanctuaries" to Israel, and called for action "by all legitimate means" to end its "tyranny and injustice".<sup><a href="#s14">14</a></sup>
 
-The words became attacks. Since July 2026 the movement has declared a blockade of Saudi oil exports and fired missiles and drones at Saudi cities, oil facilities and airports.<sup><a href="#s13">13</a></sup> Its strikes on the airports of Riyadh, Abha and Dammam between 6 and 12 October 2026 killed at least 20 people and injured more than 370.<sup><a href="#s15">15</a></sup><sup><a href="#s17">17</a></sup> On 15 September Saudi air defences shot down a Houthi drone on course for Mecca, according to the coalition, which had intercepted a ballistic missile headed for the city in July 2017.<sup><a href="#s16">16</a></sup> The movement denies aiming at Mecca. Its record of striking airports and cities does not support the denial.
-
-<h2><span class="label">VIII · The pattern</span>From a family to a strait</h2>
-
-The movement's beliefs explain its map. A project for the whole umma cannot stop at a border. A leadership chosen by God cannot accept a vote, a dialogue or a power-sharing agreement as final. Each place it has taken has been a step to the next one: Marran, Saada, Amran, Sanaa, Hodeidah, the push to Aden, Marib, and in September 2026 the Bab al-Mandab strait.<sup><a href="#s17">17</a></sup> [See the expansion map](/timeline/).
-
-<div class="testimony" role="note">
-  <span class="label">Still being researched</span>
-  <p>This record is searching the founder's lectures and the leader's speeches for any direct statement about taking control of Mecca and Medina. If one exists, it will be published here in full. The record does not claim it until it is found.</p>
-</div>
+The words became attacks. Since July 2026 the movement has declared a blockade of Saudi oil exports and fired missiles and drones at Saudi cities, oil facilities and airports.<sup><a href="#s13">13</a></sup> Its strikes on the airports of Riyadh, Abha and Dammam between 6 and 12 October 2026 killed at least 20 people and injured more than 370.<sup><a href="#s15">15</a></sup><sup><a href="#s17">17</a></sup> On 15 September Saudi air defences shot down a Houthi drone on course for Mecca, according to the coalition, which had intercepted a ballistic missile headed for the city in July 2017.<sup><a href="#s16">16</a></sup> The movement denies aiming at Mecca.

@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://houthirecord.org/sitemap-index.xml

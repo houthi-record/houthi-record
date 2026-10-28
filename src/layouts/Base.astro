@@ -5,10 +5,13 @@ import '@fontsource/ibm-plex-mono/400.css';
 import '@fontsource/ibm-plex-mono/500.css';
 import '../styles/global.css';
 import { SITE, NAV } from '../site.js';
+import { PREVIEW, isPublic } from '../gate.js';
 
 const { title, description = SITE.description, section = '', type = 'website', jsonld = null, noindex = false } = Astro.props;
 const fullTitle = title ? `${title} · ${SITE.name}` : `${SITE.name} · ${SITE.tagline}`;
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
+const nav = NAV.filter((n) => isPublic(n.href));
+const robots = PREVIEW || noindex;
 ---
 <!doctype html>
 <html lang={SITE.lang} dir="ltr">
@@ -18,7 +21,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site).href;
   <title>{fullTitle}</title>
   <meta name="description" content={description}>
   <link rel="canonical" href={canonical}>
-  {noindex && <meta name="robots" content="noindex">}
+  {robots && <meta name="robots" content="noindex, nofollow">}
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="sitemap" href="/sitemap-index.xml">
   <meta property="og:site_name" content={SITE.name}>
@@ -35,11 +38,12 @@ const canonical = new URL(Astro.url.pathname, Astro.site).href;
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
+  {PREVIEW && <div class="preview-bar" role="note"><div class="wrap">Private preview · includes drafts that are not on the public site</div></div>}
   <header class="top">
     <div class="wrap bar">
       <a class="mark" href="/"><b>{SITE.name}</b><span class="label">{SITE.tagline}</span></a>
       <nav class="nav" aria-label="Sections">
-        {NAV.map((n) => <a href={n.href} aria-current={section === n.key ? 'page' : undefined}>{n.label}</a>)}
+        {nav.map((n) => <a href={n.href} aria-current={section === n.key ? 'page' : undefined}>{n.label}</a>)}
         <div class="ctl" role="group" aria-label="Language">
           <button type="button" aria-pressed="true">EN</button>
           <button type="button" aria-pressed="false" disabled title="Arabic edition in preparation" lang="ar">عربي</button>
@@ -60,12 +64,20 @@ const canonical = new URL(Astro.url.pathname, Astro.site).href;
       <span class="label">{SITE.name} · English edition</span>
       <nav aria-label="Site information">
         <a class="label" href="/charter/">Charter</a>
-        <a class="label" href="/corrections/">Corrections</a>
+        {isPublic('/corrections/') && <a class="label" href="/corrections/">Corrections</a>}
       </nav>
     </div>
   </footer>
   <script is:inline>
     (function () {
+      // Links to other websites open in a new tab.
+      document.querySelectorAll('a[href^="http"]').forEach(function (a) {
+        if (a.host !== location.host) { a.target = '_blank'; a.rel = 'noopener noreferrer'; }
+      });
+      // The header's height, for sticky elements below it.
+      var hdr = document.querySelector('header.top');
+      function setH() { document.documentElement.style.setProperty('--hdr', hdr.offsetHeight + 'px'); }
+      setH(); window.addEventListener('resize', setH);
       var root = document.documentElement;
       function apply(t) {
         if (t === 'light' || t === 'dark') root.setAttribute('data-theme', t); else root.removeAttribute('data-theme');

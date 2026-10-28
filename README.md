@@ -17,23 +17,18 @@ Every change pushed to the `main` branch is published automatically.
 
 ## Editorial rules
 
-1. **Every claim carries a source.** In chapters, cite with `<sup><a href="#s4">4</a></sup>`, where 4 is the number of the source in the `sources:` list at the top of the file.
-2. **Mark the evidence level** after each claim:
-   - `<span class="ev-tag">■ Documented</span>`
-   - `<span class="ev-tag">□ Testimony</span>`
-   - `<span class="ev-tag">◇ Allegation</span>`
-3. **Drafts stay marked.** Keep `draft: true` in a chapter until every claim has been checked against its source. Then set `draft: false` and `status: Published`.
-4. **Corrections are logged.** When a published claim changes, add an entry to the corrections page with the date, the original text and the new text.
-5. **Protect people.** No names of private individuals, witnesses or victims without their consent. Remove metadata from every image and document before adding it.
+The full rules are in the editorial guide, kept privately in the project. In short:
 
-## Voice
+1. **Only approved content is public.** `src/data/publish.json` lists which pages appear on houthirecord.org. A page is set to `true` only after the editor approves it in the editorial desk.
+2. **Every fact has a source** that meets the guide's source rules. No allegations, no "still being researched" notes, no analysis paragraphs.
+3. **Testimony** appears only in marked testimony boxes, under a pseudonym.
+4. **Protect people.** No private individual is identifiable without consent. Metadata is removed from every file.
 
-1. **Say what happened, plainly, in our own voice.** When a fact is documented, state it. Do not write "X says" or "according to" for things that are established.
-2. **Attribute only what is genuinely contested.** A party's claim or a single-source figure is attributed in one clause, then set against the record. It is never left for the reader to weigh as if both sides were equal.
-3. **Primary sources first.** Use the movement's own texts, laws and speeches, official documents and UN findings. Use research centres and NGOs for facts they documented, not for their interpretations.
-4. **Context with every event.** Say what came before, what the party said it wanted, and what it did next.
-5. **One standard for every party.** Coalition and government abuses are recorded in the same voice and to the same standard.
-6. **No claim without a source,** however certain we are. If something is still being researched, say so.
+## Public site and private preview
+
+- **Public:** the `main` branch builds houthirecord.org with approved pages only.
+- **Private preview:** the `preview` branch builds everything, drafts included, with search engines blocked. It is served at `preview.houthi-record.pages.dev`, behind Cloudflare Access.
+- Locally: `npm run build` builds the public site; `PREVIEW=1 npm run build` builds the preview.
 
 ## Adding a source to a timeline event
 

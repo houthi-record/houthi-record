@@ -1,0 +1,21 @@
+{
+  "_note": "The publishing gate. Only pages set to true appear on the public site (houthirecord.org). Everything appears on the private preview. Claude changes a value to true only after the editor approves the item in the editorial desk.",
+  "pages": {
+    "/": true,
+    "/charter/": true,
+    "/chapters/": false,
+    "/chapters/roots/": false,
+    "/chapters/the-six-wars/": false,
+    "/chapters/uprising-and-dialogue/": false,
+    "/chapters/the-fall-of-sanaa/": false,
+    "/chapters/beliefs-and-aims/": false,
+    "/timeline/": false,
+    "/agreements/": false,
+    "/documents/": false,
+    "/corrections/": false
+  },
+  "home": {
+    "why": false,
+    "chapters": false
+  }
+}

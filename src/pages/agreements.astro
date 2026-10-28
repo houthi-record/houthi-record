@@ -2,11 +2,11 @@
 import Base from '../layouts/Base.astro';
 import AGREEMENTS from '../data/agreements.json';
 ---
-<Base title="The agreements record" description="Every ceasefire and agreement the Houthi movement has signed since 2007, what each required, and what happened next, with sources." section="agreements" noindex={true}>
+<Base title="The agreements record" description="Every ceasefire and agreement the Houthi movement has signed since 2007, what each required, and what happened next, with sources." section="agreements" >
   <div class="page-head">
     <span class="label">The agreements record · draft</span>
     <h1>What was signed, and what happened</h1>
-    <p>Each ceasefire and agreement the Houthi movement has entered since 2007, set out in the same way: what it required, and what happened next. Where the other side also failed to keep its terms, that is recorded too.</p>
+    <p>Each ceasefire and agreement the Houthi movement has entered since 2007, set out in the same way: what it required, and what happened next. Where another party also failed to keep its terms, that is recorded too.</p>
   </div>
 
   <ol class="agr">
@@ -27,12 +27,7 @@ import AGREEMENTS from '../data/agreements.json';
     ))}
   </ol>
 
-  <section class="note pattern" aria-labelledby="pat">
-    <span class="label" id="pat">◇ Analysis · the pattern</span>
-    <p>Two kinds of terms recur in these agreements. The first gives the movement something it wants: a role in government, an end to a siege of its own areas, flights and fuel. The second requires it to give up ground or weapons: leave buildings, hand over ports, open roads.</p>
-    <p>In this record, the movement has generally accepted the first kind and resisted the second. In September 2014 it signed the political agreement and refused the security annex. In January 2015 it won constitutional concessions and stayed at the palace. In 2018 and 2022, the ports of Hodeidah and the roads of Taiz stayed under its control.</p>
-    <p>Its opponents have also broken terms, and the record says so where they did. The difference is in what each failure changed. In this record, the movement's failures to withdraw left it holding more territory than before.</p>
-  </section>
+
 </Base>
 
 <style>

@@ -10,26 +10,27 @@ const PARTIES = {
   coalition: 'Saudi Arabia and coalition',
   intl: 'International',
 };
-const EVIDENCE = { documented: '■ Documented', testimony: '□ Testimony', allegation: '◇ Allegation' };
 const years = [...new Set(EVENTS.map((e) => e.year))];
 ---
 <Base title="Timeline" description="A dated timeline of the Houthi movement and the war in Yemen, filterable by party, with sources for every event." section="timeline">
   <div class="page-head">
     <span class="label">Timeline · draft</span>
     <h1>Key events, in order</h1>
-    <p>Filter by party. Each event links to its sources and, where written, to its chapter.</p>
+    <p>Step through the map to follow the movement's advance, or read every event below. Each event links to its sources and, where written, to its chapter.</p>
   </div>
   <ExpansionMap />
-  <h2 class="label" style="margin-bottom:1rem">All events</h2>
+  <div class="tl-bar">
+  <h2 class="label">All events</h2>
   <div class="filters" role="group" aria-label="Filter by party">
     <button type="button" data-f="all" aria-pressed="true">All parties</button>
     {Object.entries(PARTIES).map(([k, v]) => <button type="button" data-f={k} aria-pressed="false">{v}</button>)}
+  </div>
   </div>
   <div class="tl">
     {years.map((y) => (
       <section class="year" data-year={y}>
         <h2>{y}</h2>
-        <div>
+        <div class="evs">
           {EVENTS.filter((e) => e.year === y).map((e) => (
             <div class="ev" data-party={e.party}>
               <span class="d">{e.date}</span>
@@ -38,7 +39,6 @@ const years = [...new Set(EVENTS.map((e) => e.year))];
                 <p>{e.summary}</p>
                 <div class="meta">
                   <span>{PARTIES[e.party]}</span>
-                  <span>{EVIDENCE[e.evidence]}{e.sources.length === 0 ? ' · sources pending' : ''}</span>
                   {e.sources.map((s) => <a href={s.url} rel="noopener noreferrer">{s.label}</a>)}
                   {e.chapter && <a href={e.chapter}>Read chapter →</a>}
                 </div>

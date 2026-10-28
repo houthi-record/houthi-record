@@ -3,6 +3,8 @@
    No accent colour. Hierarchy comes from type, weight and rules only. */
 
 :root {
+  --accent: #A86A1F;
+  --hdr: 4rem;
   --paper: #F3F3F0;
   --sheet: #FAFAF8;
   --ink: #1A1A18;
@@ -16,12 +18,12 @@
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme='light']) {
-    --paper: #121211; --sheet: #181817; --ink: #E7E6E1; --ink-2: #A6A59E; --ink-3: #77766F; --rule: #2B2B29;
+    --paper: #121211; --sheet: #181817; --ink: #E7E6E1; --ink-2: #A6A59E; --ink-3: #77766F; --rule: #2B2B29; --accent: #D9A05B;
     color-scheme: dark;
   }
 }
 :root[data-theme='dark'] {
-  --paper: #121211; --sheet: #181817; --ink: #E7E6E1; --ink-2: #A6A59E; --ink-3: #77766F; --rule: #2B2B29;
+  --paper: #121211; --sheet: #181817; --ink: #E7E6E1; --ink-2: #A6A59E; --ink-3: #77766F; --rule: #2B2B29; --accent: #D9A05B;
   color-scheme: dark;
 }
 
@@ -54,7 +56,7 @@ p { margin: 0; }
 /* header */
 header.top { position: sticky; top: 0; z-index: 5; background: var(--paper); border-bottom: 1px solid var(--rule); }
 .bar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-block: 0.9rem; flex-wrap: wrap; }
-.mark { display: flex; align-items: baseline; gap: 0.75rem; text-decoration: none; flex-wrap: wrap; }
+.mark { display: flex; flex-direction: column; gap: 0.1rem; text-decoration: none; }
 .mark b { font-weight: 500; font-size: 1.0625rem; letter-spacing: -0.005em; }
 .nav { display: flex; align-items: center; gap: 1.25rem; flex-wrap: wrap; }
 .nav a { font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.04em; text-decoration: none; color: var(--ink-2); }
@@ -65,6 +67,7 @@ header.top { position: sticky; top: 0; z-index: 5; background: var(--paper); bor
 .ctl button[aria-pressed='true'] { color: var(--ink); background: var(--sheet); }
 .ctl button:disabled { cursor: not-allowed; }
 
+.preview-bar { background: var(--ink); color: var(--paper); font-family: var(--mono); font-size: 0.6875rem; letter-spacing: 0.06em; text-transform: uppercase; padding-block: 0.4rem; margin-left: calc(-1 * max(16px, env(safe-area-inset-left, 0px))); margin-right: calc(-1 * max(16px, env(safe-area-inset-right, 0px))); padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
 main { padding-block: clamp(2.5rem, 7vw, 5.5rem); }
 
 /* index */
@@ -101,11 +104,17 @@ main { padding-block: clamp(2.5rem, 7vw, 5.5rem); }
 .filters { display: flex; flex-wrap: wrap; gap: 0.5rem; }
 .filters button { font-family: var(--mono); font-size: 0.75rem; background: none; color: var(--ink-2); border: 1px solid var(--rule); padding: 0.35rem 0.7rem; cursor: pointer; }
 .filters button[aria-pressed='true'] { color: var(--ink); border-color: var(--ink); }
-.tl { margin-top: 2.5rem; border-top: 1px solid var(--ink); }
+.tl-bar { position: sticky; top: var(--hdr); z-index: 4; background: var(--paper); padding-block: 0.9rem; border-bottom: 1px solid var(--ink); display: flex; gap: 1rem 1.5rem; align-items: center; flex-wrap: wrap; }
+.tl-bar .label { margin: 0; }
+.tl { margin-top: 0; }
+.evs { position: relative; padding-left: 1.5rem; }
+.evs::before { content: ""; position: absolute; left: 0.3rem; top: 0.9rem; bottom: 0.9rem; width: 1px; background: var(--rule); }
+.ev { position: relative; }
+.ev::before { content: ""; position: absolute; left: -1.45rem; top: 1.05rem; width: 7px; height: 7px; border-radius: 50%; background: var(--paper); border: 1px solid var(--ink-3); }
 .year { display: grid; grid-template-columns: 7rem minmax(0, 1fr); gap: 1.5rem; border-bottom: 1px solid var(--rule); padding-block: 1.6rem; }
-.year > h2 { font-family: var(--mono); font-size: 0.9rem; color: var(--ink-2); position: sticky; top: 5rem; align-self: start; }
+.year > h2 { font-family: var(--mono); font-size: 0.9rem; color: var(--ink-2); position: sticky; top: calc(var(--hdr) + 4.5rem); align-self: start; }
 .ev { display: grid; grid-template-columns: 6.5rem minmax(0, 1fr); gap: 1rem; padding-block: 0.6rem; }
-.ev + .ev { border-top: 1px dotted var(--rule); }
+
 .ev .d { font-family: var(--mono); font-size: 0.75rem; color: var(--ink-3); padding-top: 0.3rem; font-variant-numeric: tabular-nums; }
 .ev h3 { font-size: 1.125rem; line-height: 1.35; }
 .ev p { font-size: 0.975rem; color: var(--ink-2); margin-top: 0.25rem; max-width: var(--measure); }

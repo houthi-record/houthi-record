@@ -21,7 +21,7 @@
     "title": "First Saada war",
     "summary": "The government arrests hundreds of Houthi supporters and offers a reward for Hussein al-Houthi. Fighting begins in Saada.",
     "evidence": "documented",
-    "chapter": "/chapters/the-saada-wars/",
+    "chapter": "/chapters/the-six-wars/",
     "sources": [
       {
         "label": "Ahram Online timeline",
@@ -40,7 +40,7 @@
     "title": "Hussein al-Houthi killed",
     "summary": "The movement's founder is killed by government forces. Leadership passes to his younger brother Abdulmalik.",
     "evidence": "documented",
-    "chapter": "/chapters/the-saada-wars/",
+    "chapter": "/chapters/the-six-wars/",
     "sources": [
       {
         "label": "Ahram Online timeline",
@@ -59,7 +59,7 @@
     "title": "Operation Scorched Earth",
     "summary": "The army launches its largest offensive in Saada, the sixth round of the war.",
     "evidence": "documented",
-    "chapter": "/chapters/the-saada-wars/",
+    "chapter": "/chapters/the-six-wars/",
     "sources": [
       {
         "label": "Ahram Online timeline",
@@ -74,7 +74,7 @@
     "title": "Saudi Arabia enters the fighting",
     "summary": "Fighting spreads across the border for the first time. Saudi forces fight the Houthis and retake border areas the Houthis had seized.",
     "evidence": "documented",
-    "chapter": "/chapters/the-saada-wars/",
+    "chapter": "/chapters/the-six-wars/",
     "sources": [
       {
         "label": "Ahram Online timeline",
@@ -89,7 +89,7 @@
     "title": "Ceasefire ends sixth war",
     "summary": "Six rounds of war since 2004 end in a ceasefire, without a settlement. More than 250,000 people have been displaced.",
     "evidence": "documented",
-    "chapter": "/chapters/the-saada-wars/",
+    "chapter": "/chapters/the-six-wars/",
     "sources": [
       {
         "label": "Al Jazeera, 12 Feb 2010",
@@ -661,27 +661,13 @@
     "year": "2026",
     "date": "15 Sep 2026",
     "party": "coalition",
-    "title": "Houthi drone shot down on course for Mecca",
-    "summary": "Saudi air defences destroy a Houthi drone heading for Mecca, according to the coalition, which intercepted a ballistic missile headed for the city in July 2017. The movement denies aiming at Mecca, while striking Saudi airports and cities the same weeks.",
-    "evidence": "allegation",
+    "title": "Saudi Arabia announces it shot down a drone heading for Mecca",
+    "summary": "The coalition announces that its air defences destroyed a Houthi drone before it reached Mecca's airspace, and that a ballistic missile was intercepted on its way to the city in July 2017. The movement denies aiming at Mecca. In the same weeks its missiles and drones hit Saudi cities and airports.",
+    "evidence": "documented",
     "sources": [
       {
         "label": "Al Jazeera, 16 Sep 2026",
         "url": "https://www.aljazeera.net/news/2026/9/16/ماذا-نعرف-عن-محاولة-استهداف-مكة"
-      }
-    ]
-  },
-  {
-    "year": "2026",
-    "date": "27 Sep 2026",
-    "party": "coalition",
-    "title": "Strike on a Taiz market",
-    "summary": "The Houthi health ministry says a strike killed seven people and wounded 40 at a market. The government says it targeted a Houthi camp.",
-    "evidence": "allegation",
-    "sources": [
-      {
-        "label": "Wikipedia: 2026 in Yemen (cites Reuters)",
-        "url": "https://en.wikipedia.org/wiki/2026_in_Yemen"
       }
     ]
   },

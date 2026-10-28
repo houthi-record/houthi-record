@@ -2,52 +2,70 @@
 import Base from '../layouts/Base.astro';
 import RecordList from '../components/RecordList.astro';
 import { CHAPTERS } from '../data/chapters.js';
+import { HOME, isPublic } from '../gate.js';
+
+// Only chapters that are on this build are linked.
+const chapters = CHAPTERS.map((c) => (c.href && !isPublic(c.href) ? { ...c, href: undefined } : c));
 ---
 <Base section="home">
   <div class="hero">
     <span class="label">A documented history · Yemen, 1992 to the present</span>
     <h1>How a movement from Saada <em>took a state</em>, and what it has done with it.</h1>
-    <p>The story of Ansar Allah, known as the Houthis, told in order and in full: its origins, its wars, its beliefs and its rule. It also records the conduct of the Saudi-led coalition and every other party to the war. Each claim is linked to its source.</p>
+    <p>The story of Ansar Allah, known as the Houthis, told in order and in full: where it came from, what it believes in its own words, how it took power and how it rules. Every fact is linked to its source.</p>
   </div>
 
-  <hr class="rule">
+  {!HOME.chapters && (
+    <>
+      <hr class="rule">
+      <section class="two" aria-labelledby="prep">
+        <span class="label" id="prep">In preparation</span>
+        <div class="note">
+          <p>The first chapters are being prepared and checked against their sources. They will be published here when that work is complete.</p>
+          <p><a href="/charter/">Read the charter →</a></p>
+        </div>
+      </section>
+    </>
+  )}
 
-  <section class="two" aria-labelledby="how">
-    <span class="label" id="how">How to read this record</span>
-    <div class="layers">
-      <div class="layer">
-        <h3><span class="sym" aria-hidden="true">■</span>Documented</h3>
-        <p>Established by published evidence: UN reports, court records, official statements, and verified reporting. Every documented claim carries a numbered source.</p>
-      </div>
-      <div class="layer">
-        <h3><span class="sym" aria-hidden="true">□</span>Testimony</h3>
-        <p>An eyewitness account, given as testimony and labelled as such. Where other sources corroborate it, they are cited alongside.</p>
-      </div>
-      <div class="layer">
-        <h3><span class="sym" aria-hidden="true">◇</span>Allegation</h3>
-        <p>A claim that is serious but not yet proven. Published only with supporting evidence, and with the response of the accused party where one exists.</p>
-      </div>
-    </div>
-  </section>
+  {HOME.why && (
+    <>
+      <hr class="rule">
+      <section class="two" aria-labelledby="method">
+        <span class="label" id="method">Why this record</span>
+        <div class="note">
+          <p>The Houthi movement has ruled Yemen's capital since 2014. It is one of the most widely discussed armed movements in the world, and most of what is written about it concerns the war: a strike, a ceasefire, a ship in the Red Sea.</p>
+          <p>Each of those reports can be accurate and still leave the reader with the wrong picture, because each begins in the middle. It rarely says where the movement came from, what it says it believes, or what it has done before.</p>
+          <p>The Houthi Record tells the story from the beginning: the movement's origins in Saada, its beliefs in its own words, how it took power, how it governs and how it fights. Every fact is documented and every source is shown. The movement's founding texts and speeches are published in full, in Arabic and English, so readers can judge them for themselves.</p>
+          <p>The record has no funding and accepts none. It does not ask to be trusted. It asks to be checked.</p>
+          <p><a href="/charter/">Read the charter →</a></p>
+        </div>
+      </section>
+    </>
+  )}
 
-  <hr class="rule">
+  {HOME.chapters && (
+    <>
+      <hr class="rule">
+      <section class="two" aria-labelledby="how">
+        <span class="label" id="how">How to read this record</span>
+        <div class="layers" style="grid-template-columns:repeat(2,minmax(0,1fr))">
+          <div class="layer">
+            <h3>Documented</h3>
+            <p>Every fact is confirmed by a primary document, a UN finding, or independent reports, and carries a numbered source.</p>
+          </div>
+          <div class="layer">
+            <h3><span class="sym" aria-hidden="true">□</span>Testimony</h3>
+            <p>An eyewitness account, published under a pseudonym and marked as testimony. It is never mixed into the documented narrative.</p>
+          </div>
+        </div>
+      </section>
 
-  <section class="two" aria-labelledby="ch">
-    <span class="label" id="ch">Chapters</span>
-    <RecordList items={CHAPTERS} />
-  </section>
+      <hr class="rule">
 
-  <hr class="rule">
-
-  <section class="two" aria-labelledby="method">
-    <span class="label" id="method">Why this record</span>
-    <div class="note">
-      <p>Read as a list of events, Yemen's war can look like any revolution against a corrupt government. It was not. Yemen's government was weak and corrupt, and its parties competed for power. But for ten months in 2013, all of them, the Houthis included, sat together in a National Dialogue to agree on a new state. One movement then took the capital by force.</p>
-      <p>That movement believes its leadership was chosen by God. It has accepted no election, dialogue or agreement as final, and it has expanded by war, from a mountain district in Saada to the Bab al-Mandab strait. When its alliance with former President Saleh broke down, it killed him. This record tells that story in order and in full, with the movement's own words set beside its actions.</p>
-      <p>The movement calls 21 September 2014 a revolution. It was the armed seizure of a capital, during a transition the movement had joined, against a president elected as the joint candidate of Yemen's main parties.</p>
-      <p>The record covers every party. Coalition airstrikes on homes, markets, hospitals and funerals are documented here with the same standard of evidence as Houthi abuses. One standard for everyone is what makes the record hard to dismiss.</p>
-      <p>Corrections are logged publicly with the date and the change made.</p>
-      <p><a href="/charter/">Read the full charter →</a></p>
-    </div>
-  </section>
+      <section class="two" aria-labelledby="ch">
+        <span class="label" id="ch">Chapters</span>
+        <RecordList items={chapters} />
+      </section>
+    </>
+  )}
 </Base>
