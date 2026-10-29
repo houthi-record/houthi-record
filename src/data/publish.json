@@ -15,7 +15,7 @@
     "/corrections/": false
   },
   "home": {
-    "why": false,
+    "why": true,
     "chapters": false
   }
 }

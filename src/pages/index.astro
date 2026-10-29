@@ -21,7 +21,7 @@ const chapters = CHAPTERS.map((c) => (c.href && !isPublic(c.href) ? { ...c, href
         <span class="label" id="prep">In preparation</span>
         <div class="note">
           <p>The first chapters are in preparation.</p>
-          <p><a href="/charter/">Read the charter →</a></p>
+          {!HOME.why && <p><a href="/charter/">Read the charter →</a></p>}
         </div>
       </section>
     </>

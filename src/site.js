@@ -1,7 +1,7 @@
 // Site-wide settings. Edit names and descriptions here.
 export const SITE = {
   name: 'The Houthi Record',
-  tagline: 'An independent record',
+  tagline: 'Yemen, 1992 to the present',
   description:
     'A history of the Houthi movement (Ansar Allah) in Yemen, from its origins in Saada to the present, with its founding texts and speeches in Arabic and English.',
   url: 'https://houthirecord.org',
