@@ -27,7 +27,7 @@ The full rules are in the editorial guide, kept privately in the project. In sho
 ## Public site and private preview
 
 - **Public:** the `main` branch builds houthirecord.org with approved pages only.
-- **Private preview:** the `preview` branch builds everything, drafts included, with search engines blocked. It is served at `preview.houthi-record.pages.dev`, behind Cloudflare Access.
+- **Drafts:** never built on Cloudflare. The editor reviews drafts in the editorial desk, with screenshots where layout matters. `PREVIEW=1 npm run build` builds everything locally, with search engines blocked.
 - Locally: `npm run build` builds the public site; `PREVIEW=1 npm run build` builds the preview.
 
 ## Adding a source to a timeline event
