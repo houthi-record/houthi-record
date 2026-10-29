@@ -3,7 +3,7 @@ export const SITE = {
   name: 'The Houthi Record',
   tagline: 'An independent record',
   description:
-    'An independent, documented history of the Houthi movement (Ansar Allah) in Yemen, from its origins in Saada to the present, in its own words and set against the public record.',
+    'A history of the Houthi movement (Ansar Allah) in Yemen, from its origins in Saada to the present, with its founding texts and speeches in Arabic and English.',
   url: 'https://houthirecord.org',
   lang: 'en',
 };
