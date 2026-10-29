@@ -143,6 +143,8 @@ figcaption { font-size: 0.9rem; color: var(--ink-2); margin-top: 1rem; display: 
 .both div { padding: 1.1rem 1.25rem; display: grid; gap: 0.4rem; align-content: start; }
 .both div + div { border-left: 1px solid var(--rule); }
 .both p { font-size: 0.975rem; color: var(--ink-2); margin: 0; }
+.both p.small { font-family: var(--mono); font-size: 0.6875rem; color: var(--ink-3); }
+.both [lang="ar"] p { font-size: 1.15rem; line-height: 1.9; }
 .testimony { margin: 3rem 0; border: 1px dashed var(--ink-3); padding: 1.5rem; display: grid; gap: 0.6rem; background: var(--sheet); }
 .testimony p { color: var(--ink-2); font-size: 0.975rem; margin: 0; }
 .sources { margin-top: 4rem; border-top: 1px solid var(--ink); padding-top: 1.5rem; }
